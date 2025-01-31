@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+/gh-pages
 
 # profiling files
 chrome-profiler-events*.json
