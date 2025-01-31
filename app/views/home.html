@@ -1,11 +1,9 @@
 <!-- views/home.html -->
 <h1>Welcome to Home Page (View for main controller)</h1>
 <h1>JSON is a nested structure (like categories and products):</h1>
-<div ng-repeat="category in data.categories">
-    <h2>{{ category.name }}</h2>
-    <ul>
-        <li ng-repeat="product in category.products">
-            {{ product.name }} - ${{ product.price }}
-        </li>
-    </ul>
+<div ng-controller="MainController">
+    <h1>{{ data.title }}</h1>
+    <p>Version: {{ data.version }}</p>
+    <p>Author: {{ data.author }}</p>
 </div>
+

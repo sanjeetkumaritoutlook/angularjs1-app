@@ -1,20 +1,5 @@
 {
-    "categories": [
-        {
-            "id": 1,
-            "name": "Electronics",
-            "products": [
-                {"id": 101, "name": "Smartphone", "price": 499},
-                {"id": 102, "name": "Laptop", "price": 999}
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Clothing",
-            "products": [
-                {"id": 201, "name": "T-Shirt", "price": 19},
-                {"id": 202, "name": "Jeans", "price": 49}
-            ]
-        }
-    ]
+    "title": "My AngularJS App",
+    "version": "1.0.0",
+    "author": "John Doe"
 }
