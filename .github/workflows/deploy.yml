@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: npm install --force
       
-      - name: Build Angular app
+      - name: Build AngularJS v1 app
         run: npm run build
 
       - name: Upload build artifacts

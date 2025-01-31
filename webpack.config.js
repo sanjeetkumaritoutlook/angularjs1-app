@@ -5,7 +5,7 @@ module.exports = {
   entry: './app/app.module.js', // Your main JS file
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist/js')
+    path: path.resolve(__dirname, 'dist/angularjs1-app')  // Make sure this matches your upload path
   },
   module: {
     rules: [
