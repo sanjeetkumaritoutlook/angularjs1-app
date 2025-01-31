@@ -38,7 +38,7 @@ jobs:
         run: npm install --force
       
       - name: Build Angular app
-        run: npm run build -- --base-href=/angularjs1-app/
+        run: npm run build
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
