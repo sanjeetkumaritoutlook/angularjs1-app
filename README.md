@@ -30,7 +30,7 @@ Install Webpack and its dependencies:
 npm install --save-dev webpack webpack-cli webpack-dev-server
 
 then
- 
+
 npm install --save-dev babel-loader @babel/core @babel/preset-env
 
 Run the Webpack build: Add the build script to your package.json:
@@ -60,3 +60,10 @@ git add .github/workflows/deploy.yml
 git commit -m "Set up GitHub Actions for deployment"
 git push origin master
 
+## The --base-href option is typically used in Angular CLI for setting the base URL of your app. Since you're using Webpack, you need to configure this differently.
+
+Solution: Use the HtmlWebpackPlugin to Set base Href
+You can use the HtmlWebpackPlugin to modify the base tag in your index.html file and set the base-href. Here's how you can do it:
+npm install --save-dev html-webpack-plugin
+
+The HtmlWebpackPlugin is responsible for generating an index.html file with the correct paths for your assets.

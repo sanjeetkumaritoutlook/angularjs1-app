@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -20,6 +21,12 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html',  // Your template file
+      base: '/angularjs1-app/' // This is where you set the base-href
+    })
+  ],
   devServer: {
     contentBase: './dist',
     port: 8080
