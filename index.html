@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AngularJS App</title>
+    <title>AngularJS App</title>     
 </head>
 <body ng-app="myApp">
-
-    <div ng-controller="MainController">
+  <div ng-controller="MainController">
         <h1>{{ message }}</h1>
     </div>
+	<hello-world></hello-world>
+    <!-- Place all scripts at the bottom -->
 
     <script src="node_modules/angular/angular.min.js"></script>
-   <script src="app/app.module.js"></script>
-   <script src="app/app.config.js"></script>
+	<script src="node_modules/angular-route/angular-route.min.js"></script>
+   <script src="app/app.module.js"></script>    <!-- This must come first -->
+   <script src="app/services/data.service.js"></script>  <!-- ✅ Add this -->
+   <script src="app/controllers/main.controller.js"></script>
+   <script src="app/controllers/about.controller.js"></script>
+    <script src="app/app.config.js"></script> 
+     <script src="app/components/hello-world.component.js"></script>
+	    <!-- Optional Bootstrap JS -->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
 
 </body>
 </html>
