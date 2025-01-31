@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$/, // Apply Babel to JS files
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
