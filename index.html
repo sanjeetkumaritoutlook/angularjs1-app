@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AngularJS App</title>     
+    <title>AngularJS App</title>   
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body ng-app="myApp">
   <div ng-controller="MainController">
@@ -12,10 +13,17 @@
     </div>
 	<hello-world></hello-world>
     <!-- Place all scripts at the bottom -->
+ <!-- Load AngularJS from CDN or local based on environment -->
+ <!-- Development (local) -->
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
 
-    <script src="node_modules/angular/angular.min.js"></script>
-	<script src="node_modules/angular-route/angular-route.min.js"></script>
-    <script src="dist/angularjs1-app/bundle.js"></script>
+<!-- Production (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular-route.min.js"></script>
+<!-- 
+ <script src="dist/angularjs1-app/bundle.js"></script> -->
+
     <!-- dist folder for github pages static site only -->
    <script src="app/app.module.js"></script>    <!-- This must come first -->
    <script src="app/services/data.service.js"></script>  <!-- ✅ Add this -->
@@ -23,8 +31,8 @@
    <script src="app/controllers/about.controller.js"></script>
     <script src="app/app.config.js"></script> 
      <script src="app/components/hello-world.component.js"></script>
-	    <!-- Optional Bootstrap JS -->
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	    <!-- Optional Bootstrap JS at top -->
+ <!-- <link rel="stylesheet" href="<%= process.env.NODE_ENV === 'development' ? 'node_modules/bootstrap/dist/css/bootstrap.min.css' : 'dist/angularjs1-app/bootstrap.min.css' %>">   -->
 
 
 </body>

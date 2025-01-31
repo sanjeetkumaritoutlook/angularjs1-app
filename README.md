@@ -67,3 +67,12 @@ You can use the HtmlWebpackPlugin to modify the base tag in your index.html file
 npm install --save-dev html-webpack-plugin
 
 The HtmlWebpackPlugin is responsible for generating an index.html file with the correct paths for your assets.
+
+##  use a build tool like Webpack or environment variables to inject different script paths based on the environment.
+2️⃣ Using Conditional Logic in index.html with NODE_ENV
+
+Summary
+
+Webpack Solution: You can bundle both local and production scripts based on environment using Webpack's DefinePlugin.
+
+Simple Conditional Logic: Use a simple conditional check in index.html or your build process to load different scripts for local development and production environments.
